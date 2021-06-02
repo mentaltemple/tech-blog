@@ -1,10 +1,9 @@
 const router = require("express").Router();
 const userRoutes = require("./userRoutes");
-const projectRoutes = require("./projectRoutes");
+const projectRoutes = require("./postsRoutes");
 
-//NEED TO DEFINE ROUTES
 router.use("/users", userRoutes);
-//HERE TOO
-router.use("/projects", projectRoutes);
+
+router.use("/posts", postsRoutes);
 
 module.exports = router;
