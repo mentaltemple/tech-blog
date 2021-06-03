@@ -1,6 +1,6 @@
-const User = require("./users");
-const Post = require("./posts");
-const Comment = require("./comments");
+const User = require("./user");
+const Post = require("./post");
+const Comment = require("./comment");
 
 //NEED TO DEFINE ASSOCIATIONS
 Post.belongsTo(User, {
