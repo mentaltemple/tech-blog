@@ -1,0 +1,15 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  background-color: rgb(31, 31, 31);
+}
+
+header {
+  height: fit-content;
+  background-color: white;
+  font-size: 2rem;
+  padding: 1rem;
+}
+h1 {
+  font-size: 5rem;
+}
