@@ -13,6 +13,7 @@ Comment.init(
   },
   {
     sequelize,
+    freezeTableName: true,
   }
 );
 
