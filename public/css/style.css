@@ -12,6 +12,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: palegreen 5px solid;
 }
 h1 {
   font-size: 5rem;
