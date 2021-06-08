@@ -16,7 +16,7 @@ router.get("/login", (req, res) => {
   }
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -30,8 +30,7 @@ router.get("/:id", async (req, res) => {
     const post = postData.get({ plain: true });
 
     res.render("posts", {
-      ...post,
-      logged_in: req.session.logged_in,
+      post,
     });
   } catch (err) {
     res.status(500).json(err);

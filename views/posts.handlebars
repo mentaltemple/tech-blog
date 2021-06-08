@@ -1,1 +1,58 @@
-<p>{{log post}}</p>
+{{log post}}
+
+<div class="posts">
+
+  <div class="card">
+    <div class="card-header flex-row">
+      <h1>
+        {{post.title}}
+      </h1>
+      <div>
+        Posted by:
+        {{User.username}}
+        on
+        {{format_date post.createdAt}}
+      </div>
+    </div>
+    <div class="card-body">
+      {{post.body}}
+    </div>
+
+  </div>
+  {{#if post.comments}}
+    <div class="card">
+      <div class="card-header">
+        <h1>Comments</h1>
+      </div>
+      <div class="card-body">
+        {{#each post.comments}}
+          <div>
+            <p>
+              {{body}}
+            </p>
+            <p>
+              {{User.username}},{{format_date createdAt}}
+            </p>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+  <form action="" id="newComment" class="card">
+    <h2>
+      New Comment
+    </h2>
+    <div class="card-body">
+      <input id="id" type="hidden" value="{{post.id}}" />
+      <textarea
+        name=""
+        id="comment-body"
+        cols="30"
+        rows="10"
+        class="form-input"
+      ></textarea>
+      <button class="btn" type="submit">Submit</button>
+    </div>
+  </form>
+
+</div>
