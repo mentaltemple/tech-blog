@@ -6,7 +6,7 @@ router.get("/", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const postData = await Post.findAll({
-      where: { user_id: req.session.user_id },
+      where: { userId: req.session.userId },
     });
 
     const allPosts = postData.map((post) => post.get({ plain: true }));
