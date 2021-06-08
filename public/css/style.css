@@ -17,7 +17,14 @@ header {
 h1 {
   font-size: 5rem;
 }
+h2 {
+  font-size: 3rem;
+}
 
 a {
   padding: 2rem;
+}
+
+p {
+  font-size: 2rem;
 }
