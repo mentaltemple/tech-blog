@@ -19,13 +19,13 @@
     </div>
 
   </div>
-  {{#if post.comments}}
+  {{#if post.Comments}}
     <div class="card">
       <div class="card-header">
         <h1>Comments</h1>
       </div>
       <div class="card-body">
-        {{#each post.comments}}
+        {{#each post.Comments}}
           <div>
             <p>
               {{body}}
@@ -56,3 +56,5 @@
   </form>
 
 </div>
+
+<script src="/js/comment.js"></script>

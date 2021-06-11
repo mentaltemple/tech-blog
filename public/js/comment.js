@@ -1,11 +1,11 @@
 commentFormSubmit = async (event) => {
   event.preventDefault();
-  const id = document.querySelector("#id").value;
+  const postId = document.querySelector("#id").value;
   const body = document.querySelector("#comment-body").value.trim();
 
   const response = await fetch("/api/comment", {
     method: "POST",
-    body: JSON.stringify({ id, body }),
+    body: JSON.stringify({ postId, body }),
     headers: { "Content-Type": "application/json" },
   });
 
@@ -17,5 +17,5 @@ commentFormSubmit = async (event) => {
 };
 
 document
-  .querySelector("newComment")
+  .querySelector("#newComment")
   .addEventListener("submit", commentFormSubmit);
